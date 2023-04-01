@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- Favicon icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/images/favicon.png"
+    />
+    <title>Dr.Admin</title>
+    <!-- Custom CSS -->
+    <link href="dist/css/style.min.css" rel="stylesheet" />
+
+    <!-- page css -->
+    <link href="dist/css/pages/file-upload.css" rel="stylesheet" />
+    <link rel="stylesheet" href="build/vanilla-calendar.min.css" />
+    <script src="build/vanilla-calendar.min.js"></script>
+  </head>
+
+  <body class="skin-megna fixed-layout">
+    <div class="preloader">
+      <div class="loader">
+        <div class="loader__figure"></div>
+        <p class="loader__label"></p>
+      </div>
+    </div>
+    <div id="main-wrapper">
+      <header class="topbar">
+        <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+          <!-- Logo -->
+
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+              <!-- Dark Logo icon -->
+              <img
+                src="../assets/images/logo-icon.png"
+                alt="homepage"
+                class="dark-logo"
+              />
+              <!-- Light Logo icon -->
+              <img
+                src="../assets/images/logo-icon.png"
+                alt="homepage"
+                class="light-logo"
+                width="30px"
+              />
+              <span>Hospital</span>
+
+              <!--End Logo icon -->
+            </a>
+          </div>
+
+          <!-- End Logo -->
+
+          <div class="navbar-collapse">
+            <!-- toggle and nav items -->
+
+            <ul class="navbar-nav me-auto">
+              <!-- This is  -->
+              <li class="nav-item">
+                <a
+                  class="nav-link nav-toggler d-block d-md-none waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  ><i class="ti-menu"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  ><i class="icon-menu"></i
+                ></a>
+              </li>
+
+              <!-- Search -->
+
+              <li class="nav-item">
+                <form class="app-search d-none d-md-block d-lg-block">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search & enter"
+                  />
+                </form>
+              </li>
+            </ul>
+
+            <!-- User profile and search -->
+
+            <ul class="navbar-nav my-lg-0">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle waves-effect waves-dark"
+                  href=""
+                  id="2"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="icon-bell"></i>
+                  <div class="notify">
+                    <span class="heartbit"></span> <span class="point"></span>
+                  </div>
+                </a>
+                <div
+                  class="dropdown-menu mailbox dropdown-menu-end animated bounceInDown"
+                  aria-labelledby="2"
+                >
+                  <ul>
+                    <li>
+                      <div class="drop-title">You have 4 new messages</div>
+                    </li>
+                    <li>
+                      <div class="message-center">
+                        <!-- Message -->
+                        <a href="javascript:void(0)">
+                          <div class="user-img">
+                            <img
+                              src="../assets/images/users/1.jpg"
+                              alt="user"
+                              class="img-circle"
+                            />
+                            <span
+                              class="profile-status online pull-right"
+                            ></span>
+                          </div>
+                          <div class="mail-contnet">
+                            <h5>Pavan kumar</h5>
+                            <span class="mail-desc"
+                              >Just see the my admin!</span
+                            >
+                            <span class="time">9:30 AM</span>
+                          </div>
+                        </a>
+                        <!-- Message -->
+                        <a href="javascript:void(0)">
+                          <div class="user-img">
+                            <img
+                              src="../assets/images/users/2.jpg"
+                              alt="user"
+                              class="img-circle"
+                            />
+                            <span class="profile-status busy pull-right"></span>
+                          </div>
+                          <div class="mail-contnet">
+                            <h5>Sonu Nigam</h5>
+                            <span class="mail-desc"
+                              >I've sung a song! See you at</span
+                            >
+                            <span class="time">9:10 AM</span>
+                          </div>
+                        </a>
+                        <!-- Message -->
+                        <a href="javascript:void(0)">
+                          <div class="user-img">
+                            <img
+                              src="../assets/images/users/3.jpg"
+                              alt="user"
+                              class="img-circle"
+                            />
+                            <span class="profile-status away pull-right"></span>
+                          </div>
+                          <div class="mail-contnet">
+                            <h5>Arijit Sinh</h5>
+                            <span class="mail-desc">I am a singer!</span>
+                            <span class="time">9:08 AM</span>
+                          </div>
+                        </a>
+                        <!-- Message -->
+                        <a href="javascript:void(0)">
+                          <div class="user-img">
+                            <img
+                              src="../assets/images/users/4.jpg"
+                              alt="user"
+                              class="img-circle"
+                            />
+                            <span
+                              class="profile-status offline pull-right"
+                            ></span>
+                          </div>
+                          <div class="mail-contnet">
+                            <h5>Pavan kumar</h5>
+                            <span class="mail-desc"
+                              >Just see the my admin!</span
+                            >
+                            <span class="time">9:02 AM</span>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <a
+                        class="nav-link text-center link"
+                        href="javascript:void(0);"
+                      >
+                        <strong>See all e-Mails</strong>
+                        <i class="fa fa-angle-right"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown u-pro">
+                <a
+                  class="nav-link dropdown-toggle waves-effect waves-dark profile-pic"
+                  href=""
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  ><img
+                    src="../assets/images/users/1.jpg"
+                    alt="user"
+                    class=""
+                  />
+                  <span class="hidden-md-down"
+                    >Mark &nbsp;<i class="fa fa-angle-down"></i
+                  ></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end animated flipInY">
+                  <!-- text-->
+                  <a href="profile.html" class="dropdown-item"
+                    ><i class="ti-user"></i> My Profile</a
+                  >
+
+                  <a href="reset-password.html" class="dropdown-item"
+                    ><i class="ti-key"></i> Update Password</a
+                  >
+
+                  <!-- text-->
+                  <div class="dropdown-divider"></div>
+                  <!-- text-->
+                  <a href="login.html" class="dropdown-item"
+                    ><i class="fa fa-power-off"></i> Logout</a
+                  >
+                  <!-- text-->
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+          <!-- Sidebar navigation-->
+          <nav class="sidebar-nav">
+            <ul id="sidebarnav">
+              <li class="user-pro text-center">
+                <a
+                  class="waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  ><img
+                    src="../assets/images/users/1.jpg"
+                    alt="user-img"
+                    class="img-circle"
+                  />
+                  <p>
+                    Mark Jeckson <br />
+                    <small class="text-success">
+                      <i class="fa fa-plus"></i> doctor</small
+                    >
+                  </p>
+                </a>
+              </li>
+              <li class="nav-small-cap">--- PERSONAL</li>
+              <li>
+                <a class="waves-effect waves-dark" href="index.html"
+                  ><i class="icon-speedometer"></i
+                  ><span class="hide-menu">Dashboard</span></a
+                >
+              </li>
+
+              <li class="nav-small-cap">--- PROFESSIONAL</li>
+              <li>
+                <a href="doctor.html">
+                  <i class="fa fa-user-md"></i
+                  ><span class="hide-menu">Doctors</span></a
+                >
+              </li>
+              <li>
+                <a
+                  class="has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  ><i class="icon-people"></i
+                  ><span class="hide-menu">Patients</span></a
+                >
+                <ul aria-expanded="false" class="collapse">
+                  <li><a href="add-patient.html">Add Patients</a></li>
+                  <li><a href="patient-list.html"> Patient List</a></li>
+                  <li><a href="add-documents.html"> Add Documents</a></li>
+                  <li><a href="documents-list.html"> Documents List</a></li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  class="has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  ><i class="ti-calendar"></i
+                  ><span class="hide-menu">Schedule</span></a
+                >
+                <ul aria-expanded="false" class="collapse">
+                  <li><a href="add-schudule.html">Add Schedule</a></li>
+                  <li><a href="schudule-list.html"> Schedule List</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a
+                  class="has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  ><i class="fa fa-edit"></i
+                  ><span class="hide-menu">Appointment</span></a
+                >
+                <ul aria-expanded="false" class="collapse">
+                  <li><a href="add-appoinment.html">Add Appointment </a></li>
+                  <li><a href="appoinment-list.html">Appointment List </a></li>
+                  <li><a href="assign-to-me.html">Assign to Me </a></li>
+                  <li><a href="assign-by-me.html">Assign by Me </a></li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  class="has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  ><i class="ti-layout-media-right-alt"></i
+                  ><span class="hide-menu">Prescription</span></a
+                >
+                <ul aria-expanded="false" class="collapse">
+                  <li>
+                    <a href="add-patient-case-study.html"
+                      >Add Patient case study</a
+                    >
+                  </li>
+                  <li>
+                    <a href="patient-case-study-list.html"
+                      >Patient case study List</a
+                    >
+                  </li>
+                  <li><a href="add-preciption.html">Add Prescription</a></li>
+                  <li><a href="preciption-list.html"> Prescription List</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="noticeboard.html">
+                  <i class="fa fa-bell"></i
+                  ><span class="hide-menu">NoticeBoard</span></a
+                >
+              </li>
+              <li>
+                <a
+                  class="has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  ><i class="fa fa-building"></i
+                  ><span class="hide-menu">Hospital Activities</span></a
+                >
+                <ul aria-expanded="false" class="collapse">
+                  <li><a href="add-birth-report.html">Add Birth Report </a></li>
+                  <li><a href="birth-report.html">Birth Report</a></li>
+                  <li><a href="add-death-report.html">Add Death Report </a></li>
+                  <li><a href="death-report.html">Death Report </a></li>
+                  <li>
+                    <a href="add-operation-report.html"
+                      >Add Operation Report
+                    </a>
+                  </li>
+                  <li>
+                    <a href="operation-report.html"> Operation Report </a>
+                  </li>
+                  <li>
+                    <a href="investigation-report.html">
+                      Investigation Report
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  class="has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  ><i class="fa fa-bed"></i
+                  ><span class="hide-menu">Bed Manager</span></a
+                >
+                <ul aria-expanded="false" class="collapse">
+                  <li><a href="bed-assign.html">Bed Assign</a></li>
+                  <li><a href="bed-assign-list.html">Bed Assign List</a></li>
+                  <li><a href="report.html">Report</a></li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  class="has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  ><i class="fa fa-heart"></i
+                  ><span class="hide-menu">Case Manager</span></a
+                >
+                <ul aria-expanded="false" class="collapse">
+                  <li><a href="patient.html">Patient</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+      </aside>
+      <div class="page-wrapper">
+        <div class="container-fluid">
+          <!-- .row -->
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a
+                      href="preciption-list.html"
+                      type="button"
+                      class="btn btn-primary"
+                    >
+                      <i class="fa fa-list"></i> preciption-list
+                    </a>
+                  </h4>
+                  <hr />
+                  <form class="form">
+                    <div class="form-group mt-5 row">
+                      <div class="col-4 mb-3">
+                        <input
+                          type="text"
+                          placeholder="Patient ID "
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="col-4 mb-3">
+                        <input
+                          type="text"
+                          placeholder="Weight"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="col-4 mb-3">
+                        <input
+                          type="text"
+                          placeholder="doctor Id"
+                          value="APNQJOQ3"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="col-4 mb-3">
+                        <input
+                          type="text"
+                          placeholder="Patient Name "
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="col-4 mb-3">
+                        <input
+                          type="text"
+                          placeholder="Blood Pressure"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="col-4 mb-3">
+                        <input
+                          type=""
+                          placeholder="Todays"
+                          value="1/04/2023"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="col-4 mb-3">
+                        <select name="" id="" class="form-control form-select">
+                          <option value="" selected>Select Gender</option>
+                          <option value="1">Male</option>
+                          <option value="2">FeMale</option>
+                          <option value="3">Other</option>
+                        </select>
+                      </div>
+                      <div class="col-4 mb-3">
+                        <input
+                          type="text"
+                          placeholder="Reference"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="col-4 mb-3">
+                        <input
+                          type="text"
+                          placeholder="hospital Name"
+                          value="Demo Hospital Limited"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="col-4 mb-3">
+                        <input
+                          type="date"
+                          placeholder="Date of Birth"
+                          class="invoice-input form-control dropdown-month-years vanilla-calendar"
+                          id="date_of_birth"
+                        />
+                      </div>
+                      <div class="col-4 mb-3">
+                        <div class="form-group row">
+                          <div class="col-10 d-flex">
+                            <div class="form-check mx-3">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="flexRadioDefault"
+                                id="flexRadioDefault1"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="flexRadioDefault1"
+                              >
+                                New
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="flexRadioDefault"
+                                id="flexRadioDefault1"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="flexRadioDefault1"
+                              >
+                                Old
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-4 mb-3">
+                        <div class="form-group row">
+                          <div class="col-10 d-flex">
+                            <div class="form-check mx-3">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="flexRadioDefault2"
+                                id="flexRadioDefault2"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="flexRadioDefault2"
+                              >
+                                OPD
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="flexRadioDefault2"
+                                id="flexRadioDefault2"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="flexRadioDefault2"
+                              >
+                                IPD
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 mb-3">
+                        <input
+                          type="text"
+                          placeholder="Address"
+                          value="House#25, 4th Floor, Mannan Plaza, Khilkhet, Dhaka-1229, Bangladesh."
+                          class="form-control"
+                        />
+                      </div>
+                      <hr />
+                      <div class="col-8 mb-3">
+                        <textarea
+                          class="form-control"
+                          id="exampleFormControlTextarea1"
+                          rows="3"
+                          placeholder="chief complain"
+                        ></textarea>
+                      </div>
+
+                      <div class="col-2 mb-3">
+                        <select name="insurance_id" class="btn btn-sm select2">
+                          <option value="" selected="selected">
+                            Select Insurance
+                          </option>
+                          <option value="8">IFIC insurance</option>
+                          <option value="9">BUPA</option>
+                          <option value="11">Health</option>
+                          <option value="12">JIBB</option>
+                          <option value="13">rtyrety</option>
+                          <option value="14">unitcard</option>
+                          <option value="15">Ggggggg</option>
+                          <option value="16">Allied Insurance</option>
+                          <option value="17">Hygea Premium</option>
+                        </select>
+                      </div>
+                    </div>
+                    <hr />
+                  </form>
+                  <!-- medicine table -->
+                  <table class="table table-striped">
+                    <thead>
+                      <tr class="bg-info text-white">
+                        <th width="160">Medicine Name</th>
+                        <th width="160">Medicine Type</th>
+                        <th>Instruction</th>
+                        <th width="120">Days</th>
+                        <th width="160">Add / Remove</th>
+                      </tr>
+                    </thead>
+                    <tbody id="medicine">
+                      <tr>
+                        <td>
+                          <input
+                            type="text"
+                            autocomplete="off"
+                            class="medicine form-control"
+                            placeholder="Medicine Name"
+                          />
+                        </td>
+                        <td>
+                          <input
+                            type="text"
+                            autocomplete="off"
+                            class="form-control"
+                            placeholder="Medicine Type"
+                          />
+                        </td>
+                        <td>
+                          <textarea
+                            class="form-control"
+                            placeholder="Instruction"
+                          ></textarea>
+                        </td>
+                        <td>
+                          <input
+                            type="number"
+                            autocomplete="off"
+                            class="form-control"
+                            placeholder="Days"
+                          />
+                        </td>
+                        <td>
+                          <div class="btn btn-group">
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-success MedAddBtn"
+                            >
+                              Add
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-danger MedRemoveBtn"
+                            >
+                              Remove
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <!-- diagnosis -->
+                  <table class="table table-striped">
+                    <thead>
+                      <tr class="bg-info text-white">
+                        <th width="230">Diagnosis</th>
+                        <th>Instruction</th>
+                        <th width="160">Add / Remove</th>
+                      </tr>
+                    </thead>
+                    <tbody id="diagnosis">
+                      <tr>
+                        <td>
+                          <input
+                            type="text"
+                            autocomplete="off"
+                            class="form-control"
+                            placeholder="Diagnosis"
+                          />
+                        </td>
+                        <td>
+                          <textarea
+                            class="form-control"
+                            placeholder="Instruction"
+                          ></textarea>
+                        </td>
+                        <td>
+                          <div class="btn btn-group">
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-success DiaAddBtn"
+                            >
+                              Add
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-danger DiaRemoveBtn"
+                            >
+                              Remove
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- yoga -->
+                  <table class="table table-striped">
+                    <thead>
+                      <tr class="bg-info text-white">
+                        <th width="230">Yoga</th>
+                        <th>Instruction</th>
+                        <th width="160">Add / Remove</th>
+                      </tr>
+                    </thead>
+                    <tbody id="yoga">
+                      <tr>
+                        <td>
+                          <input
+                            type="text"
+                            autocomplete="off"
+                            class="form-control"
+                            placeholder="Yoga"
+                          />
+                        </td>
+                        <td>
+                          <textarea
+                            class="form-control"
+                            placeholder="Instruction"
+                          ></textarea>
+                        </td>
+                        <td>
+                          <div class="btn btn-group">
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-success YogaAddBtn"
+                            >
+                              Add
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-danger YogaRemoveBtn"
+                            >
+                              Remove
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <form class="form">
+                    <div class="form-group mt-5 row">
+                      <label
+                        for="example-text-input"
+                        class="col-2 col-form-label"
+                        >Visiting Fees *</label
+                      >
+                      <div class="col-10">
+                        <input
+                          type="number"
+                          placeholder="Visiting Fees "
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label
+                        for="example-text-input"
+                        class="col-2 col-form-label"
+                        >Patient Notes *</label
+                      >
+                      <div class="col-10">
+                        <textarea
+                          class="form-control"
+                          id=""
+                          rows="3"
+                          placeholder="Patient Notes"
+                        ></textarea>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="text-center">
+                    <button type="button" class="btn btn-secondary btn-sm">
+                      Reset
+                    </button>
+                    <button type="button" class="btn btn-success btn-sm">
+                      Save
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.row -->
+        </div>
+      </div>
+    </div>
+    <script src="../assets/node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="../assets/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="dist/js/waves.js"></script>
+    <script src="dist/js/prescription.js"></script>
+
+    <!--Menu sidebar -->
+    <script src="dist/js/sidebarmenu.js"></script>
+    <!--stickey kit -->
+    <script src="../assets/node_modules/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <script src="../assets/node_modules/sparkline/jquery.sparkline.min.js"></script>
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+    <script src="dist/js/pages/jasny-bootstrap.js"></script>
+  </body>
+</html>
